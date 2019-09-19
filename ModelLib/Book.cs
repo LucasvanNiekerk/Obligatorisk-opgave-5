@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace ModelLib
 {
@@ -81,11 +82,13 @@ namespace ModelLib
 
         private void CheckIsbn13(string isbn13)
         {
+            Regex regex = new Regex(@"^\d+$");
+
             if (isbn13.Length != 13)
             {
                 throw new ArgumentException("Not a valid isbn13. Isbn13 must be exactly 13 characters long");
             }
-            else if (!long.TryParse(isbn13, out long i))
+            else if (!regex.IsMatch(isbn13))
             {
                 throw new ArgumentException("Not a valid isbn13. Isbn13 must only contain numbers");
             }

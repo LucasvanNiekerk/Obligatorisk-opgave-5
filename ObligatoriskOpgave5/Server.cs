@@ -23,7 +23,7 @@ namespace ObligatoriskOpgave5
             books = new List<Book>()
             {
                 new Book("The hunt for cake", "Hungry Chef", 124, "1337420666123"),
-                new Book("The hunt for cake2", "Hungry Chef", 412, "1392496583913"),
+                new Book("The hunt for cake2", "Hungry Chef", 412, "1392492583913"),
                 new Book("The Bible", "Jesus", 800, "8270836271932"),
                 new Book("Harry Potter", "JK. Rowling", 901, "5463746590215")
             };
